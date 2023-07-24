@@ -7,7 +7,7 @@ const Home = () => {
         <main>
             <div className="max-w-screen-2xl mx-auto">
                 <Banner />
-                <div className="relative md:-mt020 lgl:-mt-32 xl:-mt-60 mb-10">
+                <div className="relative md:-mt020 lgl:-mt-32 xl:-mt-60 mb-10 z-20">
                     <Products />
                 </div>
             </div>
