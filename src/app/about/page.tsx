@@ -1,11 +1,14 @@
+import React, { Suspense } from "react";
+import ProductLoader from "@/components/Loader/ProductLoader";
+import Products from "@/components/Products";
 import Link from "next/link";
-import React from "react";
 
 const page = () => {
     return (
-        <div className="flex flex-col">
-            About Page
-            <Link href={"/"}> Go To home</Link>
+        <div className="min-h-screen w-full">
+            <Suspense fallback={<ProductLoader />}>
+                <Products />
+            </Suspense>
         </div>
     );
 };
