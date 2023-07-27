@@ -2,11 +2,17 @@
 import { IReduxProductData } from "@/types";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
+interface IUserInfo {
+    name: string;
+    email: string;
+    image: string; // Assuming image is of type string, adjust accordingly if it's another type
+}
+
 interface IReduxPropsState {
     productData: IReduxProductData[];
     favoriteData: IReduxProductData[];
     allProducts: IReduxProductData[];
-    userInfo: null | string;
+    userInfo: null | IUserInfo;
 }
 
 const initialState: IReduxPropsState = {
@@ -45,7 +51,7 @@ const productSlice = createSlice({
         },
 
         increaseQuantity: (state, action) => {
-            const existingProduct = state.favoriteData.find(
+            const existingProduct = state.productData.find(
                 (item: IReduxProductData) => item._id === action.payload._id
             );
 
@@ -53,7 +59,7 @@ const productSlice = createSlice({
         },
 
         decreaseQuantity: (state, action) => {
-            const existingProduct = state.favoriteData.find(
+            const existingProduct = state.productData.find(
                 (item: IReduxProductData) => item._id === action.payload._id
             );
 

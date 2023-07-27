@@ -1,5 +1,6 @@
 "use client";
 import CartProduct from "@/components/CartProduct";
+import CartPayment from "@/components/CartPayment";
 import ResetCart from "@/components/ResetCart";
 import { useAppSelector } from "@/redux/hooks";
 import { IReduxProductData } from "@/types";
@@ -32,7 +33,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className="bg-white h-64 col-span-1 p-4 rounded-lg flex items-center justify-center">
-                        {/* <CartPayment /> */}
+                        <CartPayment />
                     </div>
                 </>
             ) : (

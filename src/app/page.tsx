@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import Banner from "@/components/Banner";
 import Products from "@/components/Products";
-import ProductLoader from "@/components/Loader/ProductLoader";
 
 const page = () => {
     return (

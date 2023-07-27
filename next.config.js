@@ -4,6 +4,9 @@ const nextConfig = {
     images: {
         domains: ["i.ibb.co"],
     },
+    publicRuntimeConfig: {
+        STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY,
+    },
 };
 
 module.exports = nextConfig;
